@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&display=swap");
+
+.page {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
+}
+
+.page__wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  overflow: hidden;
+}
+
+.page__header {
+  position: fixed;
+  height: 3.75rem;
+  width: 100%;
+}
+
+.header {
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  z-index: 110;
+}
+
+.header__container {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: calc(1200px + 0.9375rem + 0.9375rem);
+  padding: 0 0.9375rem;
+  margin: auto;
+}
+
+.header__brand, .header__navbar {
+  position: relative;
+  z-index: 110;
+}
+
+.brand {
+  padding: 0.5rem 0.65rem;
+  border: 0.125rem solid rgb(255, 255, 255);
+  border-radius: 0.25rem;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.brand:hover {
+  border: 0.125rem solid rgb(255, 255, 255);
+}
+
+.brand, .link {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar__item {
+  position: relative;
+  padding: 0.3125rem 0;
+}
+
+.navbar__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.125rem;
+  width: 0;
+  background: rgb(255, 255, 255);
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  border-radius: 0.125rem;
+}
+
+.navbar__item:hover::before {
+  width: 100%;
+}
+
+.page__main {
+  padding: 4.75rem 0 2rem 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.main__container {
+  max-width: calc(1200px + 0.9375rem + 0.9375rem);
+  padding: 0 0.9375rem;
+  margin: auto;
+}
+
+.resume, .title {
+  padding-bottom: 1rem;
+  text-align:center;
+
+}
+
+.resume__container, .advert__container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.675rem, 1fr));
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background: rgb(43, 43, 43);
+  padding: 1rem;
+  border: 0.125rem solid rgb(0, 0, 0);
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  border-radius: 0.25rem;
+}
+
+.card:hover {
+  -webkit-transform: scale(105%);
+  transform: scale(105%);
+}
+
+.card:hover.card--red-hover {
+  border: 0.125rem solid rgb(255, 255, 255);
+}
+
+.card:hover.card--green-hover {
+  border: 0.125rem solid rgb(255, 255, 255);
+}
+
+.card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align:center;
+}
+
+.card__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  text-align:center;
+}
+
+.description-list__data {
+  text-indent: 1rem;
+  font-style: italic;
+  color: rgb(208, 208, 208);
+  padding-bottom: 0.5rem;
+}
+
+.card__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.card__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__text {
+  -webkit-box-flex: 40%;
+  -ms-flex: 40%;
+  flex: 40%;
+  text-align:center;
+}
+
+.card__progress {
+  -webkit-box-flex: 60%;
+  -ms-flex: 60%;
+  flex: 60%;
+}
+
+.progress {
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.progress__line {
+  height: 100%;
+  width: 100%;
+  background: repeating-linear-gradient(
+    45deg, rgb(53, 53, 53), rgb(41, 41, 41) 10px, rgb(56, 56, 56) 10px, rgb(53, 53, 53) 20px
+  );
+  text-align: center;
+  font-style: italic;
+}
+
+.card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag {
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.125rem;
+}
+
+.tag--red {
+  background: rgb(0, 0, 0);
+}
+
+.tag--purple {
+  background: rgb(0, 0, 0);
+}
+
+.card__footer {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.main__scroll {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 3rem;
+  width: 3rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.scroll {
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  visibility: 1;
+  opacity: 85%;
+  pointer-events: all;
+}
+
+.scroll--hidden {
+  visibility: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page__footer {
+  min-height: 6.25rem;
+}
+
+.footer {
+  border-top: 0.0625rem solid rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
+  padding: 1rem 0;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: calc(1200px + 0.9375rem + 0.9375rem);
+  padding: 0 0.9375rem;
+  margin: auto;
+}
+
+.contact__list {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+
+  
+}
+
+.contact__link {
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  text-align: center;
+
+}
+
+.contact__link:hover {
+  -webkit-transform: scale(130%);
+  transform: scale(130%);
+  text-align: center;
+
+}
+
+.footer__copyright {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  font-style: italic;
+  font-size: 0.65rem;
+}
+
+@media only screen and (max-width: 761px) {
+  .header__navbar {
+    position: fixed;
+    top: -120%;
+    left: 0%;
+    height: 17rem;
+    width: 100%;
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+    z-index: 100;
+  }
+  .header__navbar.navbar--active {
+    top: 0;
+  }
+  .navbar__list {
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+  }
+  .navbar__link {
+    font-size: 2rem;
+  }
+  .navbar {
+    padding: 5rem 0 1.25rem 0;
+    background: rgb(70, 82, 152);
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+    overflow: hidden;
+    opacity: 98%;
+  }
+  
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-github {
+  background: #000000;
+  color: white;
+}
+
+.fa-envelope {
+  background: #616161;
+  color: white;
+}
+
+}
